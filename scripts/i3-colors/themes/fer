@@ -1,0 +1,25 @@
+bar_colors: {}
+meta:
+  description: Generated From i3-colors
+window_colors:
+  focused:
+    background: '#173f4f'
+    border: '#73ba25'
+    indicator: '#00ff00'
+    text: '#35b9ab'
+  focused_inactive:
+    background: '#2f343f'
+    border: '#2f343f'
+    indicator: '#00ff00'
+    text: '#8F8E7F'
+  unfocused:
+    background: '#2f343f'
+    border: '#2f343f'
+    indicator: '#00ff00'
+    text: '#8F8E7F'
+  urgent:
+    background: '#fb2e01'
+    border: '#fb2e01'
+    indicator: '#00ff00'
+    text: '#35b9ab'
+
