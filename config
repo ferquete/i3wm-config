@@ -76,11 +76,11 @@ workspace $ws2 output $monitor_principal
 workspace $ws3 output $monitor_principal
 workspace $ws4 output $monitor_principal
 workspace $ws5 output $monitor_principal
-workspace $ws6 output $monitor_principal
-workspace $ws7 output $monitor_principal
-workspace $ws8 output $monitor_principal
-workspace $ws9 output $monitor_principal
-workspace $ws10 output $monitor_principal
+workspace $ws6 output $monitor_auxiliar
+workspace $ws7 output $monitor_auxiliar
+workspace $ws8 output $monitor_auxiliar
+workspace $ws9 output $monitor_auxiliar
+workspace $ws10 output $monitor_auxiliar
 
 ### Asignacion Coloreando las ventanas de las ventanas
 ###                       bordes             fondos               texto             indicador
@@ -403,6 +403,9 @@ exec --no-startup-id guake
 #exec --no-startup-id i3-msg 'workspace $ws1; exec google-chrome;'
 exec --no-startup-id dunst
 exec --no-startup-id bateria.py
+# raton Logitech MX Master 3
+exec --no-startup-id solaar -w hide
+
 
 ### fondo de pantalla
 exec_always feh --bg-scale ~/.config/i3/wallpaper/gd.jpg
