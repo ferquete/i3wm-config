@@ -139,8 +139,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 #bindsym XF86AudioRaiseVolume exec ~/.config/i3/scripts/volumen/volume-increase.sh
 #bindsym XF86AudioLowerVolume exec ~/.config/i3/scripts/volumen/volume-decrease.sh
-
-
+bindsym --whole-window button6 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && $refresh_i3status
+bindsym --whole-window button7 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && $refresh_i3status
+bindsym $mod+Tab exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -273,7 +274,8 @@ bindsym button3 floating toggle
 bindsym $mod+f floating toggle
 
 ### Start dmenu (otro: dmenu_run -l 10 -nb black -sb tomato -fn Hack)
-bindsym $mod+Tab exec rofi -show run
+#bindsym $mod+Tab exec rofi -show run : Se ha quitado porque lo utilizamso con el boton de DEDO GORDO !!!!
+bindsym $mod+Escape exec rofi -show run
 
 ### Cambiar de ventana con rofi: otra forma---> bindsym $mod+Tab exec rofi -show
 bindsym Mod1+Tab exec ~/.config/i3/scripts/tab.sh
@@ -281,6 +283,7 @@ bindsym Mod1+Tab exec ~/.config/i3/scripts/tab.sh
 ### Navegador fichero
 bindsym $mod+Shift+t workspace $ws7; exec thunar;
 bindsym $mod+t exec thunar;
+#bindsym Ctrl+Alt+Tab exec thunar;
 #bindsym $mod+y exec i3-sensible-terminal -e ranger; exec "bash -c 'sleep 0.4s; i3-msg floating enable;i3-msg resize set 1300px 600px;'"
 bindsym $mod+y exec i3-sensible-terminal -e ranger;
 #--profile yo 
